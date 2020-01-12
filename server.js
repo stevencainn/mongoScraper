@@ -33,7 +33,7 @@ app.set("view engine", "handlebars");
 app.use(express.static("public"));
 ​
 // Connect to the Mongo DB
-var URL = process.env.MONGODB_URI || "mongodb://localhost/assignment13";
+var URL = process.env.MONGODB_URI || "mongodb://localhost/mongoScraper";
 mongoose.connect(URL, { useNewUrlParser: true });
 ​
 // Routes
@@ -129,8 +129,3 @@ app.post("/articles/:id", function(req, res) {
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
 });
-Collapse
-
-
-
-
